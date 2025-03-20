@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi.css">
+    <style>
+        .menu {
+            position: absolute;
+            left: 0;
+            width: 150px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .menu-item {
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+        .underweight {
+            margin-top: 80px;
+            background-color: yellow;
+            color: black;
+        }
+        .normal {
+            margin-top: 80px ;
+            background-color: rgb(110, 251, 110);
+        }
+        .overweight {
+            margin-top: 80px;
+            background-color: red;
+        }
+        .main {
+            margin-left: 180px;
+        }
+        #container {
+            margin-top: 50px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header1">
+        <h1><section id="one">&#177; </section>BMI CALCULATOR<section id="one"> &#177;</section> </h1>
+        <div class="header">
+            <nav id="nav">
+                <u><a href="main.html">Home</a></u>
+                <u><a href="crypto.html">CRYPTO-CALC</a></u>
+                <u><a href="bmi.html">BMI-CALC</a></u>
+                <u><a href="knowledge.html">Knowledge+</a></u>
+            </nav>
+        </div>
+    </header>
+    <div class="menu">
+        <br><br>
+        <div class="menu-item underweight">Underweight</div><br>
+        <div class="menu-item normal">Normal</div><br>
+        <div class="menu-item overweight">Overweight</div>
+    </div>
+    <div class="main">
+        <h1 id="heading">BMI - CALC</h1>
+        <form id="container">
+            <input id = "n1" type="number" placeholder="Enter weight (kg)"><br><br>
+            <input id = "n2"type="number" placeholder="Enter height (cm)"><br><br>
+            <button onclick="MyBtn(event)" id="btn">Get BMI</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src = "bmi.js"></script>
+</body>
+</html>

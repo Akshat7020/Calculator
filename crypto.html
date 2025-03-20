@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Currency Converter</title>
+    <link rel="stylesheet" href="crypto.css">
+    <style>
+        @keyframes run {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .header,.footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: red;
+            width: 100%;
+            margin: 0 auto;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .header h1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .header h1 section {
+            margin: 0 10px;
+        }
+
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .running-words {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .running-words span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: run 10s linear infinite;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                width: 80%;
+                margin-left: 10%;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            select {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+                padding: 20px 0;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .box {
+                width: 90%;
+                margin-left: 5%;
+            }
+
+            .list {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <br>
+    <div class="header1">
+        <nav id="nav">
+            <u><a href="main.html">Home</a></u>
+            <u><a href="cryptoCalc.html">CRYPTO-CALC</a></u>
+            <u><a href="bmi.html">BMI-CALC</a></u>
+            <u><a href="addon.html">Knowledge+</a></u>
+        </nav> -->
+    <header class="header">
+        <h1><section id="one">&#177; </section>Crypto Currency Converter<section id="one"> &#177;</section> </h1>
+        <!-- <nav><u><a href="addon.html">Knowledge+</a></u></nav> -->
+    </header>
+    <div class="list">
+        <ul>
+            <li>1 USD = 87 INR</li>
+            <li>1 EUR = 95 INR</li>
+            <li>1 AUD = 87 INR</li>
+            <li>1 USD = 87 INR</li>
+            <li>1 OMR= 226 INR</li>
+            <li>1 KWD = 283 INR</li>
+        </ul>
+    </div>
+    <div class="box">
+        <div class="calc">
+            <h1 id="head">CRYP-CALC</h1>
+            <form>
+                <input id="amt" type="number" placeholder="Enter crypto amt.">
+        </div>
+        <div class="buttons">
+            <label> From:</label>
+            <select id="from">
+                <option value="btc">BTC</option>
+                <option value="jiocoin">JIOCOIN</option>
+                <option value="pi">PI</option>
+            </select>
+            <label> To:</label>
+            <select id="to">
+                <option value="inr">INR</option>
+                <option value="usd">USD</option>
+                <option value="aud">AUD</option>
+                <option value="eur">EUR</option>
+                <option value="kwd">KWD</option>
+                <option value="omr">OMR</option>
+            </select>
+        </div>
+        <div class="result">
+            <button id="btn" type="button" onclick="mybtn()">Result</button>
+        </div>
+
+        <div id="end"><p id="price"> </p></div>
+    </form>
+    </div>
+    
+    <script src="crypto.js"></script>
+    <footer class="footer">
+        <div class="running-words">
+            <span>&#128640; Crypto IS The Future Of Currencies 😊 &#128640;</span>
+        </div>
+    </footer>
+</body>
+</html>
